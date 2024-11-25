@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Dental Dr. Iturra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="Imagenes/Logo.png" alt="Logo Consultorio" class="logo">
+                <h1>Consultorio Dental Dr. Iturra</h1>
+                <p class="header-subtitle">Cuidamos tu sonrisa con profesionalismo y dedicación</p>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#turnos">Reservar Turno</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section id="inicio" class="section">
+                <h2>Bienvenidos a nuestro Consultorio</h2>
+                <div class="welcome-content">
+                    <img src="Imagenes/Interior.png" alt="Interior del consultorio" class="welcome-image">
+                    <div class="welcome-text">
+                        <p>Desde hace más de 15 años, nuestro consultorio dental se dedica a brindar servicios odontológicos de excelencia en la ciudad. Contamos con profesionales altamente capacitados y tecnología de última generación para garantizar los mejores resultados en todos nuestros tratamientos.</p>
+                        <p>Nos especializamos en odontología general, estética y preventiva, siempre con el objetivo de mantener la salud bucal de nuestros pacientes en óptimas condiciones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicios" class="section">
+                <h2>Nuestros Servicios</h2>
+                <div class="servicios-grid">
+                    <article class="servicio">
+                        <img src="Imagenes/LimpiezaDental.png" alt="Limpieza dental" class="servicio-imagen">
+                        <h3>Limpieza Dental</h3>
+                        <ul>
+                            <li>Eliminación de sarro y placa bacteriana</li>
+                            <li>Pulido dental</li>
+                            <li>Aplicación de flúor</li>
+                            <li>Revisión general</li>
+                        </ul>
+                    </article>
+
+                    <article class="servicio">
+                        <img src="Imagenes/Tratamientos.png" alt="Tratamientos" class="servicio-imagen">
+                        <h3>Tratamientos</h3>
+                        <ul>
+                            <li>Tratamientos de conducto</li>
+                            <li>Empastes estéticos</li>
+                            <li>Extracciones</li>
+                            <li>Blanqueamiento dental</li>
+                        </ul>
+                    </article>
+
+                    <article class="servicio">
+                        <img src="Imagenes/Urgencia.png" alt="Urgencias" class="servicio-imagen">
+                        <h3>Urgencias</h3>
+                        <ul>
+                            <li>Dolor agudo</li>
+                            <li>Traumatismos dentales</li>
+                            <li>Inflamación severa</li>
+                            <li>Pérdida de empastes</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="nosotros" class="section">
+                <h2>Nuestro Equipo</h2>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <img src="Imagenes/Iturra.png" alt="Dr. Iturra" class="team-image">
+                        <h3>Dr. Iturra</h3>
+                        <p>Especialista en Odontología General y Estética</p>
+                        <p>Con más de 15 años de experiencia, el Dr. Iturra lidera nuestro equipo con dedicación y profesionalismo.</p>
+                    </article>
+
+                    <article class="team-member">
+                        <img src="Imagenes/Rodriguez.png" alt="Dra. Ana Rodriguez" class="team-image">
+                        <h3>Dra. Ana Rodriguez</h3>
+                        <p>Especialista en Endodoncia</p>
+                        <p>Experta en tratamientos de conducto y casos complejos.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="turnos" class="section">
+                <h2>Reservar Turno</h2>
+                <form id="formularioTurnos" class="form-turnos">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-message" id="nombreError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                        <span class="error-message" id="apellidoError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fechaTurno">Fecha del Turno:</label>
+                        <input type="date" id="fechaTurno" name="fechaTurno" required>
+                        <span class="error-message" id="fechaTurnoError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ultimoControl">Último Control Dental:</label>
+                        <input type="date" id="ultimoControl" name="ultimoControl" required>
+                        <span class="error-message" id="ultimoControlError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="0" max="120" required>
+                        <span class="error-message" id="edadError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+                        <span class="error-message" id="telefonoError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" pattern="[0-9]{8}" required>
+                        <span class="error-message" id="dniError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Motivo de la consulta:</h3>
+                        <div class="checkbox-group">
+                            <div>
+                                <input type="checkbox" id="limpieza" name="motivo" value="limpieza">
+                                <label for="limpieza">Limpieza dental</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="dolor" name="motivo" value="dolor">
+                                <label for="dolor">Dolor de muelas</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="conducto" name="motivo" value="conducto">
+                                <label for="conducto">Tratamiento de conducto</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="general" name="motivo" value="general">
+                                <label for="general">Consulta general</label>
+                            </div>
+                            <button type="button" id="seleccionarTodos">Seleccionar Todos</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horario preferido:</label>
+                        <select id="horario" name="horario">
+                            <option value="">Seleccione un horario</option>
+                            <option value="9">9:00hs - 10:00hs</option>
+                            <option value="10">10:00hs - 11:00hs</option>
+                            <option value="11">11:00hs - 12:00hs</option>
+                            <option value="15">15:00hs - 16:00hs</option>
+                            <option value="16">16:00hs - 17:00hs</option>
+                        </select>
+                        <button type="button" id="btnMayusculas" class="btn-formato">Mayúsculas</button>
+                        <button type="button" id="btnMinusculas" class="btn-formato">Minúsculas</button>
+                        <span id="horarioError" class="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Reservar Turno</button>
+                </form>
+            </section>
+
+            <section id="contacto" class="section">
+                <h2>Contacto</h2>
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h3>Información de Contacto</h3>
+                        <p><strong>Dirección:</strong> Juan B Justo 176</p>
+                        <p><strong>Teléfono:</strong> 02657-15689940</p>
+                        <p><strong>Email:</strong> iturra4435@gmail.com</p>
+                        <h4>Horario de Atención:</h4>
+                        <ul>
+                            <li>Lunes a Viernes: 9:00hs - 12:00hs y 15:00hs - 17:00hs</li>
+                        </ul>
+                    </div>
+                    <div class="mapa">
+                        <img src="Imagenes/Mapa.png" alt="Mapa de ubicación" class="map-image">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Consultorio Dental Dr. Iturra. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
